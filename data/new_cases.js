@@ -280,9 +280,9 @@ async function fetchCountryData(code) {
 
     if (targetRow) {
       country_data[code] = {
-        population: Number(targetRow[populationIndex]),
-        total_cases: Number(targetRow[totalCasesIndex]),
-        new_cases: Number(targetRow[newCasesIndex]),
+        population: Number(targetRow[populationIndex]).toFixed(0),
+        total_cases: Number(targetRow[totalCasesIndex]).toFixed(0),
+        new_cases: Number(targetRow[newCasesIndex]).toFixed(0),
       };
       console.log(`成功提取 ${code} 的數據:`, country_data[code]);
     } else {
@@ -346,17 +346,17 @@ window.onload = function () {
         new_cases: {
           name: 'new cases',
           format: '{0} people',
-          thousandSeparator: ',',
-          thresholdMax: 60000,
-          thresholdMin: 1000
-        },
-        total_cases: {
-          name: 'tota cases',
-          format: '{0} people',
           thousandSeparator: ','
         },
+        total_cases: {
+          name: 'total cases',
+          format: '{0} people',
+          thousandSeparator: ',',
+          thresholdMax: 1000000,
+          thresholdMin: 1000
+        },
       },
-      applyData: 'new_cases',
+      applyData: 'total_cases',
       values: {
         AF: {
           link: 'https://pt.wikipedia.org/wiki/AF',
