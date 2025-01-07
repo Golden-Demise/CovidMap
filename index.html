@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>svgMap HTML demos</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+
+  <link href="./demo/html/demo.css" rel="stylesheet" />
+  <link href="./dist/svgMap.css" rel="stylesheet" />
+  <script src="./dist/svgMap.js"></script>
+</head>
+
+<body>
+  <div class="demo-wrapper">
+    <!-- Demo GPD -->
+
+    <div class="demo-container">
+      <h2>new cases</h2>
+
+      <div id="svgMapDataNewCases"></div>
+      <div>
+        <input id="r0" type="range" min="0" max="10000" value="0" style="width: 100%;"><br>
+        <input id="d0" type="date" min="2020-01-05" max="2024-09-03" value="2020-01-05">
+      </div>
+      <script src="./data/new_cases.js"></script>
+    </div>
+  </div>
+</body>
+
+</html>
