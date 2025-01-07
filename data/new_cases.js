@@ -2361,6 +2361,12 @@ dateInput.addEventListener("change", function () {
   location.reload();
 });
 
-
+dateInput_slide.addEventListener("change", function () {
+  const selectedDate = dateInput_slide.value; // 取得選擇的日期值
+  sessionStorage.setItem("selectedDate", selectedDate);
+  console.log(selectedDate);
+  // 刷新頁面
+  location.reload();
+});
 
 
